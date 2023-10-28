@@ -95,3 +95,20 @@
   margin: auto;
   padding: 50px;
 }
+button.login {
+  border: none;
+  padding: 10px 15px;
+  background: green;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+button.logout {
+  border: none;
+  padding: 10px 15px;
+  background: rgb(199, 52, 7);
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}

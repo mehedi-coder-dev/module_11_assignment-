@@ -1,6 +1,10 @@
-
 import img from "../assets/img/logo.png";
+
 const Header = () => {
+  const downloadArray = ["Download", "Android", "IOS/Max", "Linux", "Windows"];
+  const allCourseArray = ["All Courses", "Web and app development", "Product Design"];
+  const loginStatus = true;
+
   return (
     <div className="main_header">
       <div className="header">
@@ -10,23 +14,22 @@ const Header = () => {
           </li>
           <li>
             <select>
-              <option>Download</option>
-              <option>Android</option>
-              <option>IOS/Max</option>
-              <option>Linux</option>
-              <option>Windows</option>
+              {downloadArray.map((ele, index) => {
+                return <option key={index.toString()}>{ele}</option>;
+              })}
             </select>
           </li>
           <li>notifications</li>
           <li>En</li>
           <li>
             <select>
-              <option>All Courses</option>
-              <option>Web and app development</option>
-              <option>Product Design</option>
+              {allCourseArray.map((ele, index) => {
+                return <option key={index.toString()}>{ele}</option>;
+              })}
             </select>
           </li>
           <li>Dashboard</li>
+          <li>{loginStatus === true ? <button className="logout">LogOut</button> : <button className="login">Login</button>}</li>
         </ul>
       </div>
     </div>
